@@ -1,0 +1,30 @@
+# Bun configuration for monorepo
+
+[install]
+# Enable workspace support
+peer = true
+production = false
+optional = true
+dev = true
+exact = false
+
+# Registry configuration
+registry = "https://registry.npmjs.org"
+
+[install.cache]
+# Cache configuration
+disable = false
+
+[install.scopes]
+# Configure scoped package registries if needed
+# "@myorg" = "https://registry.myorg.com"
+
+[test]
+# Test configuration
+preload = []
+coverage = false
+
+[run]
+# Run configuration
+shell = "system"
+bun = true

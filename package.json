@@ -1,0 +1,35 @@
+{
+	"name": "project-template",
+	"version": "1.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"dev": "bun run --filter '*' dev",
+		"build": "bun run --filter '*' build",
+		"test": "bun run --filter '*' test",
+		"lint": "bun run --filter '*' lint",
+		"type-check": "bun run --filter '*' type-check",
+		"clean": "rm -rf node_modules .turbo apps/*/node_modules packages/*/node_modules && find . -name 'bun.lock' -delete",
+		"backend:dev": "bun run --filter 'apps/backend' dev",
+		"frontend:dev": "bun run --filter 'apps/frontend' dev",
+		"backend:build": "bun run --filter 'apps/backend' build",
+		"frontend:build": "bun run --filter 'apps/frontend' build"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@typescript-eslint/eslint-plugin": "^8.18.2",
+		"@typescript-eslint/parser": "^8.18.2",
+		"eslint": "^9.17.0",
+		"globals": "^15.14.0",
+		"typescript": "^5.3.0"
+	},
+	"trustedDependencies": [
+		"@biomejs/biome",
+		"esbuild",
+		"lightningcss",
+		"sharp"
+	]
+}
