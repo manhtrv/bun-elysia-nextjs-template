@@ -6,8 +6,11 @@ const getEnv = (key: string, defaultValue?: string): string => {
   return value;
 };
 
+export type RunMode = 'api' | 'worker' | 'monolithic';
+
 export const env = {
   NODE_ENV: getEnv('NODE_ENV', 'development'),
+  RUN_MODE: getEnv('RUN_MODE', 'monolithic') as RunMode,
   PORT: parseInt(getEnv('PORT', '3000'), 10),
   HOST: getEnv('HOST', '0.0.0.0'),
   DATABASE_URL: getEnv('DATABASE_URL'),

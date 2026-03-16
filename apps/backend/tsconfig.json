@@ -38,7 +38,10 @@
       "@routes/*": ["./src/routes/*"],
       "@services/*": ["./src/services/*"],
       "@plugins/*": ["./src/plugins/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@app/types": ["../../packages/types/src"],
+      "@app/shared": ["../../packages/shared/src"],
+      "@app/config": ["../../packages/config/src"]
     },
     
     "types": ["@types/bun"]
